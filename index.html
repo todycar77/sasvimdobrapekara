@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://kit.fontawesome.com/80203d7dc5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+	<meta name="author" content="Nikola Todorović"/>
+    <title>Sasvim Dobra Pekara</title>
+</head>
+    <body>
+        <div id="modal">
+            <div id="tody">
+                <div class="slikaTody">
+                    <img src="assets/images/autor.jpg" alt="autor"/>
+                </div>
+                <div class="tekst">
+                    <p>Zovem se Nikola Todorović, iz Obrenovca sam. Imam 20 godina i trenutno pohađam Visoku školu za informacione i komunikacione tehnologije,smer internet tehnologije. Završio sam "Tehničku školu Obrenovac" u Obrenovcu. Oduvek su me privlačile računarske nauke.</p>
+                </div>
+                <button id="iksic">X</button>
+            </div>
+        </div>
+        <header>
+            <div id="info">
+               <!-- generisano sa javascript-om -->
+            </div>
+            <div id="meni">
+                <div id="logo">
+                   <h2><a href="index.html"><i class="fas fa-bread-slice"></i></a></h2>
+                </div>
+                <nav id="bigMeni">
+                    <!-- generisano sa javascript-om -->
+                </nav>
+                <div class="responsMeni">  
+                    <nav id="smallMeni">
+                        <!-- generisano sa javascript-om -->
+                    </nav>
+                </div>
+                <div id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="banner">
+                <div class="tekstBanner">
+                    <h1>Sasvim Dobra Pekara</h1>
+                    <p>Zvanični sajt naše pekare</p>
+                </div>
+            </div>
+            <div class="proizvodi">
+                <h2>Naši proizvodi</h2>
+                <p>Ovde se nalaze neki prozivodi iz naše ponude</p>
+                <div id="listaProizvoda">
+                    <!-- generisano sa javascript-om -->
+                </div>
+            </div>
+            <div class="aboutBakery">
+                <div id="tekstBakery" class="tekstBakery">
+                    <h2>Mi smo</h2>
+                    <span id="menjanje">&bull; najbolji &bull;</span>
+                    <p>Sasvim Dobra Pekara ima dugu porodičnu tradiciju, koja datira još iz 1916. godine. U pekari se generacijama prenose tradicionalni recepti naših proizvoda sa stalnim proširenjem asortimana. Tajna uspeha je u poštovanju tradicije, dobrim majstorima i savremenoj tehnologiji. Upornim radom ostvareni su značajni rezultati povećanja prometa u maloprodaji.</p>
+                </div>
+            </div>
+            <div class="comments">
+                <h2>Komentari naših posetilaca...</h2>
+                <div id="blockComment">
+                    
+                </div>
+            </div>
+            <div class="contact">
+                <h2>Kontaktirajte nas</h2>
+                <div class="forma">
+                    <form id="bakeryForma">
+                        <input type="text" id="name" placeholder="Ime i prezime"/>
+                        <div class="error"></div>
+                        <input type="email" id="email" placeholder="Email"/>
+                        <div class="error"></div>
+                        <select name="about" id="about"></select>
+                        <textarea placeholder="Ako imate jos nešto dodatno da kažete..." name="poruka" id="poruka" cols="30" rows="10"></textarea>
+                        <div class="error"></div>
+                        <div class="checkBoxTerms displayFlex">
+                            <div class="oneRadio">
+                                <input type="radio" id="fizicko" name="lice"/>
+                                <label for="terms">Fizičko Lice</label>
+                            </div>
+                            <div class="oneRadio">
+                                <input type="radio" id="pravno" name="lice"/>
+                                <label for="terms">Pravno Lice</label>
+                            </div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="checkBoxTerms">
+                            <input type="checkbox" id="terms" value="terms"/>
+                            <label for="terms">Nisam robot</label>
+                        </div>
+                        <div class="error"></div>
+                        <div class="buttons">
+                            <input type="submit" value="Pošalji"/>
+                            <input type="reset" id="reset" value="Resetuj"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <a href="#">   
+            <div id="backToTop">
+                <i class="fas fa-arrow-up"></i>
+            </div>
+        </a>
+        <footer>
+            <h3>&copy;Copyright <span id="autorFooter">Nikola Todorović</span> - Visoka ICT Škola 2022</h3>
+            <a class="dokumentacija" href="Dokumentacija.pdf"><i class="fas fa-file-alt"></i> Dokumentacija</a>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+    </body>
+</html>

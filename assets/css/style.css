@@ -1,0 +1,461 @@
+@font-face{
+    font-family: "stranicaFont";
+    src: url("../fonts/font.ttf");
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+ul{
+    list-style-type: none;
+}
+body{
+    font-family: "stranicaFont";
+    background-color: #e4b672;
+}
+#info{
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #770e20;
+}
+.social a, #meni{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.social a i{
+    margin-right: 5px;
+    margin-top: 5px;
+}
+#meni{
+    background-color: #400b14;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5px 0px;
+}
+#meni #logo{
+    padding-top: 10px;
+    width: 40%;
+    text-align: center;
+}
+#meni nav{
+    width: 60%;
+    position: sticky;
+}
+#meni nav ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#meni nav ul li{
+    padding: 15px 40px;
+}
+#meni nav ul li a:hover{
+    color:#e4b672;
+    transition: 0.5s;
+}
+#hamburger{
+    display: none;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+.responsMeni{
+    display: none;
+}
+.banner{
+    width: 100%;
+    text-align: center;
+    background-image: url("../images/cover.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 200px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tekstBanner{
+    width: 30%;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 50px 0px;
+}
+.proizvodi{
+    width: 80%;
+    padding: 20px 0px;
+    margin: 10px auto;
+    text-align: center;
+}
+.proizvodi h2{
+    font-size: 2em;
+}
+#listaProizvoda{
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.proizvod{
+    width: 30%;
+    margin: 0px 20px;
+    padding-bottom: 10px;
+}
+.proizvod img{
+    width: 100%;
+}
+#modal {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#modal #tody {
+    width: 50%;
+    position: relative;
+    background-color: #400b14;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 20px;
+}
+#modal #tody .slikaTody {
+    width: 20%;
+}
+#modal #tody .slikaTody img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+#modal #tody .tekst {
+    width: 60%;
+}
+#modal #tody .tekst p {
+    padding-top: 40px;
+    color: white;
+}
+#modal #tody #iksic {
+    padding: 5px 5px;
+    border: none;
+    background-color: red;
+    color: white;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#modal #tody #iksic:hover {
+    background-color: orange;
+    transition: 0.5s;
+}
+.aboutBakery{
+    background: #770e20;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    text-align: center;
+}
+.tekstBakery{
+    width: 40%;
+}
+.tekstBakery h2{
+    font-size: 2em;
+}
+.tekstBakery span{
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
+.tekstBakery p{
+    padding-top: 20px;
+    font-size: 1.2em;
+}
+.comments{
+    width: 50%;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+}
+.comments h2, .contact h2{
+    padding: 30px 0px;
+    text-align: center;
+    font-size: 2em;
+}
+#blockComment{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#blockComment .comment{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border: 3px solid #400b14;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+#blockComment .comment h3{
+    padding-bottom: 10px;
+}
+#blockComment .comment .pictureCommenter{
+    width: 15%;
+}
+#blockComment .comment .pictureCommenter img{
+    width: 100%;
+    padding: 20px;
+    border-radius: 50%;
+}
+#blockComment .comment .textCommenter{
+    width: 80%;
+    padding: 20px;
+    padding-top: 35px;
+}
+.contact{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    background: #400b14;
+    color: white;
+}
+.error{
+    color: red;
+    font-weight: bold;
+}
+.forma{
+    text-align: center;
+    width: 60%;
+    margin: 0px auto;
+}
+
+input[type=text], input[type=email], select, .checkBoxTerms, textarea{
+    width: 50%;
+    padding: 10px 20px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+textarea{
+    display: none;
+}
+.checkBoxTerms{
+    margin: 10px auto;
+}
+.displayFlex{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.oneRadio{
+    width: 30%;
+}
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+}
+#autorFooter{
+    color: rgb(128, 0, 0);
+    font-weight: bold;
+}
+#autorFooter:hover{
+    color: blue;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.buttons{
+    width: 50%;
+    margin: 0px auto;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.buttons input[type=submit], .buttons input[type=reset]{
+    width: 30%;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: 2px solid #e4b672;
+    border-radius: 20px;
+}
+.buttons input[type=submit]:hover, .buttons input[type=reset]:hover{
+    outline: 2px solid #e4b672;
+    border: 2px solid #400b14;
+    background-color: #e4b672;
+    color: black;
+    transition: 0.5s;
+}
+.dokumentacija{
+    font-weight: bold;
+    color: black;
+}
+.slick-prev::before, .slick-next::before {
+    color: black!important;
+}
+#backToTop{
+    width: 50px;
+    height: 50px;
+    bottom: 5px;
+    right: 10px;
+    position: fixed;
+    text-align: center;
+    border: 3px solid #400b14;
+    background-color: #e4b672;
+    display: none;
+    border-radius: 15px;
+}
+#backToTop i{
+    color: black;
+    font-size: 20px;
+    padding-top: 12px;
+}
+/*responsive*/
+@media screen and (max-width: 1440px) {
+    #blockComment .comment .pictureCommenter img {
+        padding: 0px;
+        margin-top: 15px;
+        margin-right: 5px;
+    }
+}
+@media screen and (max-width: 1030px) {
+    #meni #logo {
+        padding-top: 5px;
+    }
+    #meni nav ul li {
+        padding: 10px 30px;
+    }
+    #modal #tody {
+        flex-direction: column;
+    }
+    #modal #tody .slikaTody {
+        width: 100%;
+        text-align: center;
+    }
+    #modal #tody .slikaTody img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    #modal #tody .tekst {
+        width: 100%;
+        color: black;
+        padding: 20px;
+    }
+    #modal #tody .tekst p {
+        padding-top: 0px;
+    }
+}
+@media screen and (max-width: 770px) {
+    #blockComment .comment {
+        flex-direction: column;
+        text-align: center;
+    }
+    #blockComment .comment .textCommenter, #blockComment .comment .pictureCommenter {
+        width: 100%;
+    }
+    #blockComment .comment .pictureCommenter img {
+        width: 30%;
+    }
+    #info{
+        display: none;
+    }
+    #bigMeni{
+        display: none;
+    }
+    .responsMeni{
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+    }
+    #smallMeni{
+        display: none;
+    }
+    .forma{
+        width: 100% !important;
+    }
+    .buttons{
+        width: 100% !important;
+    }
+    .buttons input[type=submit], .buttons input[type=reset]{
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+    .checkBoxTerms{
+        margin: 10px auto;
+        text-align: center !important;
+    }
+    .displayFlex{
+        display: flex;
+        flex-direction: column;
+    }
+    .oneRadio{
+        width: 100%;
+    }
+    .responsMeni #smallMeni ul li, #meni #logo{
+        width: 100%;
+        text-align: center;
+    }
+    #hamburger{
+        width: 100% !important;
+        display: block;
+    }
+}
+@media screen and (max-width: 430px) {
+    .tekstBanner {
+        width: 80%;
+    }
+    .tekstBanner h1{
+        font-size: 1.5em;
+    }
+    .tekstBanner p{
+        font-size: 1em;
+    }
+    .comments {
+        width: 80% !important;
+    }
+    #bakeryForma{
+        width: 80%;
+        margin: 0px auto;
+    }
+    input[type=text], input[type=email], select, .checkBoxTerms, textarea{
+        width: 100%;
+    }
+    #modal #tody {
+        width: 90%;
+        flex-direction: column;
+    }
+    #modal #tody .slikaTody {
+        width: 100%;
+        text-align: center;
+    }
+    #modal #tody .slikaTody img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    #modal #tody .tekst {
+        width: 100%;
+        color: black;
+        padding: 20px;
+    }
+    #modal #tody .tekst p {
+        padding-top: 0px;
+    }
+}
